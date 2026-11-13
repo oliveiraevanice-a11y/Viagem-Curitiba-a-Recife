@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cronograma de Viagem: Curitiba a Recife</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Importando a biblioteca Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>✈️ Cronograma de Viagem: Curitiba ➔ Recife</h1>
+    <p>Análise de variáveis, custos e etapas do trajeto (~3.120 km)</p>
+  </header>
+
+  <main class="container">
+    <!-- Painel de Controle para o Desafio de Configurações -->
+    <section class="controles">
+      <h2>⚙️ Explorar Configurações dos Gráficos</h2>
+      <div class="botoes">
+        <button onclick="alternarTipoGastos()">Alternar Barras / Linhas (Custos)</button>
+        <button onclick="alternarLegenda()">Mostrar / Ocultar Legendas</button>
+        <button onclick="alternarPreenchimento()">Ativar / Desativar Área (Trajeto)</button>
+      </div>
+    </section>
+
+    <!-- Grade de Gráficos -->
+    <section class="grid-graficos">
+      <!-- Gráfico 1: Variável Categórica + Numérica -->
+      <div class="card">
+        <h3>1. Orçamento por Categoria (R$)</h3>
+        <p class="descricao">Variáveis: Categoria vs. Valor Total</p>
+        <canvas id="graficoCategorias"></canvas>
+      </div>
+
+      <!-- Gráfico 2: Comparação de Duas Séries Numéricas -->
+      <div class="card">
+        <h3>2. Gastos por Dia: Planejado vs. Estimado</h3>
+        <p class="descricao">Variáveis: Dias da Viagem vs. Duas Métricas de Custo</p>
+        <canvas id="graficoDiario"></canvas>
+      </div>
+
+      <!-- Gráfico 3: Variável Temporal/Etapa + Acumulado -->
+      <div class="card card-largo">
+        <h3>3. Evolução da Distância Percorrida (km)</h3>
+        <p class="descricao">Variáveis: Etapas do Roteiro vs. Quilometragem Acumulada</p>
+        <canvas id="graficoDistancia"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto Escolar - 1ª Série | Análise de Dados e Gráficos</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
